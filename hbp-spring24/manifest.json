@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Under the Sea Productivity",
+    "description": "Extension to facilitate productivity online",
+    "version": "1.0",
+    "permissions": ["storage", "tabs", "activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "logo.png"
+    },
+    "content_scripts": [
+      {
+        "js": ["content.js"],
+        "css" : ["styles.css"],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ]
+  }
+  
